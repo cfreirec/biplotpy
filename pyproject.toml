@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "biplotpy"
+version = "0.4.0"
+description = "Biplots for Python, ported from R and validated against it: classical and HJ, canonical/CVA and HE plots, logistic (incl. constrained), STATIS, CA/MCA/CCA/RDA, PCoA/MDS with bootstrap, FA, PLS (incl. binary), GGE/AMMI and more, with their graphics"
+readme = "README.md"
+license = {text = "GPL-3.0-or-later"}
+authors = [{name = "Carlos Freire-Cadme", email = "cfreirec@unemi.edu.ec"}]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22", "scipy>=1.8", "pandas>=1.4", "matplotlib>=3.5"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.urls]
+Homepage = "https://github.com/cfreirec/biplotpy"
+Source = "https://github.com/cfreirec/biplotpy"
+Issues = "https://github.com/cfreirec/biplotpy/issues"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+biplotpy = ["datasets/*"]

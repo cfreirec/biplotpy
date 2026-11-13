@@ -1,0 +1,3 @@
+include README.md
+recursive-include tests *.py *.json *.csv *.R
+include examples/gallery.py examples/tutorial_es.ipynb
